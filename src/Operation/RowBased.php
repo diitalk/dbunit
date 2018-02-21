@@ -69,7 +69,7 @@ abstract class RowBased implements Operation
             }
 
             /* @var $table ITable */
-            $databaseTableMetaData = $databaseDataSet->getTableMetaData($table->getTableMetaData()->getTableName());
+            $databaseTableMetaData = $table->getTableMetaData();
             $query                 = $this->buildOperationQuery($databaseTableMetaData, $table, $connection);
             $disablePrimaryKeys    = $this->disablePrimaryKeys($databaseTableMetaData, $table, $connection);
 
